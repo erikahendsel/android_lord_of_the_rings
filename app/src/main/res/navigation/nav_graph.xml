@@ -3,20 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/lotrListFragment">
+    app:startDestination="@id/lotrListNewFragment">
 
-    <fragment
-        android:id="@+id/lotrListFragment"
-        android:name="com.erikahendsel.lotr.LotrListFragment"
-        android:label="fragment_lotr_list"
-        tools:layout="@layout/fragment_lotr_list" >
-        <action
-            android:id="@+id/action_lotrListFragment_to_lotrDetailFragment"
-            app:destination="@id/lotrDetailFragment" />
-    </fragment>
     <fragment
         android:id="@+id/lotrDetailFragment"
         android:name="com.erikahendsel.lotr.LotrDetailFragment"
         android:label="fragment_lotr_detail"
         tools:layout="@layout/fragment_lotr_detail" />
+    <fragment
+        android:id="@+id/lotrListNewFragment"
+        android:name="com.erikahendsel.lotr.LotrListNewFragment"
+        android:label="LotrListNewFragment" >
+        <action
+            android:id="@+id/action_lotrListNewFragment_to_lotrDetailFragment"
+            app:destination="@id/lotrDetailFragment" />
+    </fragment>
 </navigation>

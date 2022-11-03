@@ -2,12 +2,15 @@
 buildscript {
     ext {
         nav_version = "2.5.3"
+        kotlin_version = "1.7.20"
     }
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
+        classpath "com.android.tools.build:gradle:4.1.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         //Gradle plugin that will assist you with type safety when passing data between fragments
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
     }

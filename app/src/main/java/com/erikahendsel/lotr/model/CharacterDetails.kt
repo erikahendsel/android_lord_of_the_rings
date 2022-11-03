@@ -1,7 +1,9 @@
 package com.erikahendsel.lotr.model
 
+import com.squareup.moshi.Json
+
 data class CharacterDetails(
-    val _id: String,
+    @Json(name = "_id") val id: String,
     val birth: String,
     val death: String,
     val gender: String,
@@ -11,5 +13,5 @@ data class CharacterDetails(
     val race: String,
     val realm: String,
     val spouse: String,
-    val wikiUrl: String
+    var wikiUrl: String = ""
 )

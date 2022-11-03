@@ -7,7 +7,7 @@ class Datasource {
     fun loadCharacters(): List<CharacterDetails> {
         return listOf(
             CharacterDetails(
-                _id = "5cd99d4bde30eff6ebccfbbe",
+                id = "5cd99d4bde30eff6ebccfbbe",
                 height = "",
                 race = "Human",
                 gender = "Female",
@@ -20,7 +20,7 @@ class Datasource {
                 wikiUrl = "http://lotr.wikia.com//wiki/Adanel"
             ),
             CharacterDetails(
-                _id = "5cd99d4bde30eff6ebccfbbf",
+                id = "5cd99d4bde30eff6ebccfbbf",
                 height = "",
                 race = "Human",
                 gender = "Male",
