@@ -7,11 +7,16 @@
         <variable
             name="character"
             type="com.erikahendsel.lotr.model.CharacterDetails" />
+
+        <variable
+            name="clickListener"
+            type="com.erikahendsel.lotr.adapter.LotrListener" />
     </data>
 
     <TextView
         android:id="@+id/item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@{character.name}"/>
+        android:text="@{character.name}"
+        android:onClick="@{() -> clickListener.onClick(character)}"/>
 </layout>

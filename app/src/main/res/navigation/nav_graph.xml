@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_lotr_detail" />
     <fragment
         android:id="@+id/lotrListNewFragment"
-        android:name="com.erikahendsel.lotr.LotrListNewFragment"
+        android:name="com.erikahendsel.lotr.LotrListFragment"
         android:label="LotrListNewFragment" >
         <action
             android:id="@+id/action_lotrListNewFragment_to_lotrDetailFragment"

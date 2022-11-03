@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.erikahendsel.lotr.viewModel.LotrViewModel" />
@@ -14,14 +15,24 @@
         android:layout_height="match_parent"
         tools:context=".LotrListFragment">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:importantForAccessibility="no"
+            android:scaleType="center"
+            android:src="@drawable/lord_of_the_rings_background" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/lotr_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
             android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:listData="@{viewModel.characters}"
-            app:layoutManager="LinearLayoutManager" />
+            tools:listitem="@layout/list_item" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

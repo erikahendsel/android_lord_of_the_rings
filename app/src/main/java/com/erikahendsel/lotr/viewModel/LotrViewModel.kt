@@ -14,6 +14,9 @@ class LotrViewModel : ViewModel(){
     private val _characters = MutableLiveData<List<CharacterDetails>>()
     val characters: LiveData<List<CharacterDetails>> = _characters
 
+    private val _character = MutableLiveData<CharacterDetails>()
+    val character:LiveData<CharacterDetails> = _character
+
     fun getLotrCharacters() {
         viewModelScope.launch {
             try {
@@ -25,5 +28,9 @@ class LotrViewModel : ViewModel(){
             }
 
         }
+    }
+
+    fun onLotrCharacterClicked(character: CharacterDetails) {
+        _character.value = character
     }
 }

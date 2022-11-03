@@ -26,7 +26,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface LotrApiService {
-    @GET("character?limit=3")
+    @GET("character?limit=20")
     suspend fun getCharacters(): Character
 }
 
