@@ -16,6 +16,7 @@
         tools:context=".LotrListFragment">
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
@@ -24,13 +25,29 @@
             android:scaleType="center"
             android:src="@drawable/lord_of_the_rings_background" />
 
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/searchview_style"
+            android:elevation="2dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            app:iconifiedByDefault="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryHint="Search Character" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/lotr_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:clipToPadding="false"
             android:scrollbars="vertical"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchCharacter"
             app:listData="@{viewModel.characters}"
             tools:listitem="@layout/list_item" />
 
