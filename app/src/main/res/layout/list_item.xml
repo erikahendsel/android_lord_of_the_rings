@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="character"
             type="com.erikahendsel.lotr.model.CharacterDetails" />
@@ -13,10 +14,34 @@
             type="com.erikahendsel.lotr.adapter.LotrListener" />
     </data>
 
-    <TextView
-        android:id="@+id/item_title"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@{character.name}"
-        android:onClick="@{() -> clickListener.onClick(character)}"/>
+        android:onClick="@{() -> clickListener.onClick(character)}">
+
+        <ImageView
+            android:id="@+id/scrollBackground"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:importantForAccessibility="no"
+            android:padding="6dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/old_scroll_paper_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{character.name}"
+            app:layout_constraintBottom_toBottomOf="@+id/scrollBackground"
+            app:layout_constraintEnd_toEndOf="@+id/scrollBackground"
+            app:layout_constraintStart_toStartOf="@+id/scrollBackground"
+            app:layout_constraintTop_toTopOf="@+id/scrollBackground"
+            tools:text="Character name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
